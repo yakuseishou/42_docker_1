@@ -1,0 +1,19 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    build                                              :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: kchen2 <kchen2@student.42.fr>              +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/09/10 19:44:24 by kchen2            #+#    #+#              #
+#    Updated: 2019/09/10 20:02:38 by kchen2           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+#!/bin/sh
+
+docker build -t ft-rails:on-build -f ft-rails/Dockerfile .
+
+docker build -t railsapp-img .
+
+docker run -d --name railsapp -it --rm -p 3000:3000 railsapp-img

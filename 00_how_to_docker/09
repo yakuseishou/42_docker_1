@@ -1,0 +1,19 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    09                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: kchen2 <kchen2@student.42.fr>              +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/08/08 21:10:39 by kchen2            #+#    #+#              #
+#    Updated: 2019/09/10 15:05:11 by kchen2           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+
+docker run -it --rm debian /bin/sh
+
+#after launch docker run, run the next three command
+#apt-get update
+#apt-get upgrade -y
+#apt-get install -y build-essential gcc git vim

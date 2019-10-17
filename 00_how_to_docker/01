@@ -1,0 +1,20 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    01                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: kchen2 <kchen2@student.42.fr>              +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/08/08 21:10:16 by kchen2            #+#    #+#              #
+#    Updated: 2019/09/10 14:45:44 by kchen2           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+#!/bin/bash
+
+#Creating docker machine named 'Char' on virtualbox driver#
+# docker-machine create --driver <drivername> <name of macha>#
+
+#docker-machine create --driver virtualbox Char#
+
+docker-machine create -d virtualbox --virtualbox-memory 4096 Char

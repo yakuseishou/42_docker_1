@@ -1,0 +1,23 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    06                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: kchen2 <kchen2@student.42.fr>              +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/08/08 21:10:31 by kchen2            #+#    #+#              #
+#    Updated: 2019/08/08 21:10:52 by kchen2           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+#!/bin/bash
+
+# -q : quiet for pull#
+# -d : --detach runs in bg#
+#--name to name the container#
+#-p : --publish#
+
+
+docker pull -q nginx;
+
+docker run -d --name overlord -p "$(docker-machine ip Char)":5000:80 --restart=always nginx
